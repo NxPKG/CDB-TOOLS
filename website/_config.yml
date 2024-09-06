@@ -1,0 +1,52 @@
+title: CDB
+description: >- # this means to ignore newlines until "baseurl:"
+  The Global Security Database (CDB) is a Working Group project from the Cloud
+  Security Alliance with the goal of building an open source community for
+  improving the quality and usabilty of vulnerability databases.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cdb.id" # the base hostname & protocol for your site, e.g. http://example.com
+# email: cdb@groups.cvedb.github.io
+# twitter_username: cloudsa
+# github_username:  cvedb
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
+
+# NOTE: Minima themes are to be released in v3.0 (not yet supported)
+# minima:
+#   skin: dark
+
+# Set sane defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# This controls the navigation bar on the top of the website
+header_pages:
+  - getting_started.md
+  - quick_links.md
+  - about.md
+  # - contribute/index.md
+  # - consume/index.md
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - .obsidian/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+
+# See: https://github.com/jekyll/minima/issues/709
+sass:
+  quiet_deps: true
